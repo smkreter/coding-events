@@ -38,4 +38,9 @@ public class EventController {
         return "redirect:";
     }
 
+//    @GetMapping("create")
+//    public String renderCreateEventForm() {
+//        return "events/create";
+//    }
+
 }
