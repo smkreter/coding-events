@@ -29,7 +29,7 @@ public class Event {
     @AssertTrue(message = "Registration is always required now")
     private Boolean registrationReqd;
 
-    @Min(0, message="Enter the number of people who may attend the event")
+    @Size(min = 0, message="Enter the number of people who may attend the event")
     private Integer maxAttendees;
 
     public Event(String name, String description, String contactEmail, String location, Boolean registrationReqd, Integer maxAttendees) {
