@@ -23,13 +23,13 @@ public class Event {
     private String contactEmail;
 
     @NotBlank(message = "Location is required")
-    @Size(message = "Location is too long, use an address")
+//    @Size(message = "Location is too long, use an address")
     private String location;
 
     @AssertTrue(message = "Registration is always required now")
     private Boolean registrationReqd;
 
-    @Size(min = 0, message="Enter the number of people who may attend the event")
+    @Positive(message="Enter the number of people who may attend the event")
     private Integer maxAttendees;
 
     public Event(String name, String description, String contactEmail, String location, Boolean registrationReqd, Integer maxAttendees) {
